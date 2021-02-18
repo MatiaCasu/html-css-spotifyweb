@@ -8,37 +8,62 @@ body.debug > *{
   border: 1px solid black;
 }
 
-body{
-  height: 100vh;
+body.debug *{
+  border: 1px solid black;
 }
 
-body > *, .upgrade{
+/* MIX */
+.c_lightgrey{
+  color: #a3a3a3;
+}
+
+ul.list-unstyled{
+  margin: 0;
+}
+
+.flex_box{
+  display: flex;
+}
+/* /MIX */
+
+/* STRUTTURA FIXED */
+body{
+  height: 100vh;
+  color: #fff;
+}
+
+body > *.fixed, .upgrade{
   position: fixed;
 }
 
-aside, main{
+aside.fixed.lateral, main.fixed.center{
   top: 0;
   bottom: 60px;
   height: calc( 100% - 60px );
 }
 
-aside{
+aside.fixed.lateral{
   left: 0;
   width: 200px;
+  background-color: #000;
+  flex-direction: column;
+  padding: 0 15px;
 }
 
-main{
+main.fixed.center{
   left: 200px;
   width: calc( 100% - 200px );
   overflow: auto;
   display:flex;
   flex-direction: row;
+  background-color: #141922;
 }
 
-footer{
+footer.fixed.bottom{
   bottom: 0;
   width: 100%;
   height: 60px;
+  background-color: #282828;
 }
 
 .upgrade{
@@ -47,12 +72,57 @@ footer{
   height: 60px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 50px;
 }
 
 .box{
-  width: 99%;
-  background-color: green;
+  width: 100%;
   overflow: auto;
   height: 100%;
   padding-top: 100px;
 }
+/* /STRUTTURA FIXED */
+
+/* sezione UPGRADE */
+.upgrade_text{
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+}
+/* /sezione UPGRADE */
+
+/* sezione LATERAL */
+aside.lateral > .lateral_top{
+  height: 100% ;
+  flex-direction: column;
+}
+
+/* LATERAL TOP */
+.lateral_logo{
+  height: 60px;
+  line-height: 60px;
+}
+
+.lateral_logo > img{
+  width: 80%;
+}
+
+.lateral_playlist{
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.lateral_playlist ul{
+  overflow: auto;
+}
+/* /LATERAL TOP */
+
+/* LATERAL BOTTOM */
+.lateral_bottom{
+  padding: 20px;
+}
+/* /LATERAL BOTTOM */
+
+/* /sezione LATERAL */
