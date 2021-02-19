@@ -12,6 +12,26 @@ body.debug .fixed_container > *{
   border: 1px solid black;
 } */
 
+/* TYPO */
+h2{
+  font-size: 20px;
+}
+
+h3{
+  font-size: 18px;
+}
+
+h4, h6{
+  font-size: 12px;
+}
+
+h5{
+  font-size: 16px;
+}
+
+
+/* /TYPO */
+
 /* MIX */
 .m_bottom30{
   margin-bottom: 30px;
@@ -59,7 +79,7 @@ body > .fixed_container{
 aside.lateral.fixed, main.fixed.center{
   top: 0;
   bottom: 60px;
-  height: calc( 100% - 80px );
+  height: calc( 100% - 70px );
 }
 
 aside.lateral.fixed{
@@ -75,17 +95,16 @@ aside.lateral.fixed{
 main.fixed.center{
   left: 200px;
   width: calc( 100% - 200px );
-  overflow: auto;
   display:flex;
   flex-direction: row;
   background-color: #141922;
 }
 
-.box{
+.container_body{
   width: 100%;
   overflow: auto;
   height: 100%;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 /* MAIN CENTER */
 
@@ -93,7 +112,7 @@ main.fixed.center{
 footer.fixed.bottom{
   bottom: 0;
   width: 100%;
-  height: 80px;
+  height: 70px;
   background-color: #282828;
 }
 /* FOOTER */
@@ -102,7 +121,7 @@ footer.fixed.bottom{
 .upgrade{
   left: 200px;
   width: calc( 100% - 200px );
-  height: 80px;
+  height: 70px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   align-items: center;
@@ -126,8 +145,8 @@ aside.lateral > .lateral_top{
 
 /* /LATERAL LOGO */
 .lateral_logo{
-  height: 80px;
-  line-height: 80px;
+  height: 70px;
+  line-height: 70px;
   width: 100%;
 }
 
@@ -203,6 +222,51 @@ button.install_app{
 }
 /* /LATERAL BOTTOM */
 
+/* BODY NAV */
+.body_nav ul{
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.body_nav ul li{
+  margin: 0 20px
+}
+/* BODY NAV */
+
+/* MAIN BODY */
+.main_body{
+  padding: 10px;
+}
+
+.row_body.flex_box{
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  padding-bottom: 20px;
+}
+
+.row_body.flex_box:hover{
+  overflow-x: auto;
+}
+
+.row_body .box{
+  flex-basis: calc( ( 100% / 6 ) - 10px );
+  flex-shrink: 0;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.row_body > .box > img{
+  width: 100%;
+  background-color: green;
+}
+/* /MAIN BODY */
+
+
+
 @media screen and ( max-width: 768px ){
   aside.fixed.lateral{
     width: 60px;
@@ -214,7 +278,7 @@ button.install_app{
   }
   /* /STRUTTURA FIXED */
 
-  .lateral_logo > img, .lateral button > h6, .lateral_playlist{
+  .lateral_logo > img, .lateral button > h4, .lateral_playlist{
     display: none;
   }
 
@@ -229,6 +293,12 @@ button.install_app{
   .lateral_top .flex_button img, .profile_img, .install_app > i.fa-arrow-down{
     margin: 0;
   }
-}
+  /* /sezione LATERAL */
 
-/* /sezione LATERAL */
+  /* MAIN BODY */
+  .row_body .box{
+    flex-basis: calc( 50% - 10px );
+  }
+  /* /MAIN BODY */
+
+}
