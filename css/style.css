@@ -4,15 +4,22 @@
   box-sizing: border-box;
 }
 
-body.debug > *{
+body.debug .fixed_container > *{
   border: 1px solid black;
 }
 
-body.debug *{
+/* body.debug *{
   border: 1px solid black;
-}
+} */
 
 /* MIX */
+.m_bottom30{
+  margin-bottom: 30px;
+}
+.p_w15{
+  padding: 0 15px;
+}
+
 .c_lightgrey{
   color: #a3a3a3;
 }
@@ -27,29 +34,31 @@ ul.list-unstyled{
 /* /MIX */
 
 /* STRUTTURA FIXED */
-body{
+body > .fixed_container{
   height: 100vh;
   color: #fff;
 }
 
-body > *.fixed, .upgrade{
+.fixed_container > *.fixed, .upgrade{
   position: fixed;
 }
 
-aside.fixed.lateral, main.fixed.center{
+/* ASIDE */
+aside.lateral.fixed, main.fixed.center{
   top: 0;
   bottom: 60px;
-  height: calc( 100% - 60px );
+  height: calc( 100% - 80px );
 }
 
-aside.fixed.lateral{
+aside.lateral.fixed{
   left: 0;
   width: 200px;
   background-color: #000;
   flex-direction: column;
-  padding: 0 15px;
 }
+/* /ASIDE */
 
+/* MAIN CENTER */
 main.fixed.center{
   left: 200px;
   width: calc( 100% - 200px );
@@ -59,56 +68,88 @@ main.fixed.center{
   background-color: #141922;
 }
 
-footer.fixed.bottom{
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #282828;
-}
-
-.upgrade{
-  left: 200px;
-  width: calc( 100% - 200px );
-  height: 60px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 50px;
-}
-
 .box{
   width: 100%;
   overflow: auto;
   height: 100%;
   padding-top: 100px;
 }
-/* /STRUTTURA FIXED */
+/* MAIN CENTER */
+
+/* FOOTER */
+footer.fixed.bottom{
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #282828;
+}
+/* FOOTER */
 
 /* sezione UPGRADE */
+.upgrade{
+  left: 200px;
+  width: calc( 100% - 200px );
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+
 .upgrade_text{
   padding: 10px 20px;
   border-radius: 20px;
   border: 1px solid #fff;
 }
 /* /sezione UPGRADE */
+/* /STRUTTURA FIXED */
 
-/* sezione LATERAL */
+/* Aside LATERAL dettagli */
 aside.lateral > .lateral_top{
   height: 100% ;
   flex-direction: column;
 }
 
-/* LATERAL TOP */
+/* /LATERAL LOGO */
 .lateral_logo{
-  height: 60px;
-  line-height: 60px;
+  height: 80px;
+  line-height: 80px;
+  width: 100%;
 }
 
 .lateral_logo > img{
-  width: 80%;
+  width: 90%;
 }
 
+.lateral_logo > img.lateral_logo_mobile{
+  display: none;
+}
+/* /LATERAL LOGO */
+
+/* /LATERAL Nav/Playlist BUTTONS */
+.lateral_top .flex_button{
+  display: flex;
+  height: 40px;
+  width: 100%;
+  background-color: inherit;
+  align-items: center;
+  border: 0;
+  border-left: 1px solid red;
+}
+
+.lateral_top button.flex_button img{
+  height: 20px;
+  margin: 0 10px 0 15px;
+  opacity: 0.7;
+}
+
+.lateral_top button.flex_button img:hover{
+  opacity: 1;
+}
+/* /LATERAL Nav/Playlist BUTTONS */
+
+/* LATERAL PLAYLIST */
 .lateral_playlist{
   overflow: hidden;
   flex-direction: column;
@@ -117,6 +158,26 @@ aside.lateral > .lateral_top{
 .lateral_playlist ul{
   overflow: auto;
 }
+/* /LATERAL PLAYLIST */
+
+@media screen and ( max-width: 768px ){
+  aside.fixed.lateral{
+    width: 80px;
+  }
+
+  main.fixed.center, .upgrade{
+    width: calc( 100% - 80px );
+    left: 80px;
+  }
+
+  .lateral_logo > img, .lateral_nav button > h6, .lateral_playlist{
+    display: none;
+  }
+
+  .lateral_logo > img.lateral_logo_mobile{
+    display: inline-block;
+  }
+}
 /* /LATERAL TOP */
 
 /* LATERAL BOTTOM */
@@ -124,5 +185,6 @@ aside.lateral > .lateral_top{
   padding: 20px;
 }
 /* /LATERAL BOTTOM */
+
 
 /* /sezione LATERAL */
