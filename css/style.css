@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
 body.debug .fixed_container > *{
   border: 1px solid black;
 }
@@ -23,13 +27,13 @@ h3{
 
 h4, h6{
   font-size: 12px;
+  font-weight: 500;
 }
 
 h5{
   font-size: 16px;
+  font-weight: 700;
 }
-
-
 /* /TYPO */
 
 /* MIX */
@@ -190,10 +194,6 @@ aside.lateral > .lateral_top{
 /* /LATERAL TOP */
 
 /* LATERAL BOTTOM */
-.lateral_bottom{
-  padding: 0 10px;
-}
-
 button.install_app{
   height: 30px;
   width: 100%;
@@ -242,13 +242,8 @@ button.install_app{
 }
 
 .row_body.flex_box{
-  flex-wrap: nowrap;
-  overflow-x: hidden;
   padding-bottom: 20px;
-}
-
-.row_body.flex_box:hover{
-  overflow-x: auto;
+  overflow-x: visible;
 }
 
 .row_body .box{
@@ -265,8 +260,112 @@ button.install_app{
 }
 /* /MAIN BODY */
 
+/* FOOTER */
+footer.bottom{
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
 
+/* BOTTOM LEFT  */
+.left_bottom ul.bottom_track img{
+  height: 40px;
+}
 
+.left_bottom li.bottom_artist{
+  margin: 0 10px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left_bottom .bottom_artist > *{
+  font-size: 8px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.left_bottom .bottom_add_track li{
+  padding: 0 10px;
+}
+/* /BOTTOM LEFT  */
+
+/* BOTTOM CENTER  */
+.center_bottom{
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center_bottom .timeline_button ul{
+  margin: 0 auto;
+  padding: 5px 0;
+  align-items: center;
+}
+
+.center_bottom .timeline_button i{
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+i#play_button{
+  font-size: 25px;
+}
+
+.center_bottom .timeline{
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div#timeline_bar.little_bar{
+  height: 5px;
+  width: 80%;
+  background-color: grey;
+  margin: 0 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+/* /BOTTOM CENTER  */
+
+/* BOTTOM RIGHT  */
+.right_bottom{
+  height: 40px;
+  justify-content: flex-end;
+}
+
+.right_bottom > ul > li{
+  margin: 0 5px;
+}
+
+.bottom_volume{
+  align-items: center;
+}
+
+div#volume.little_bar{
+  width: 50px;
+  margin: 0 5px;
+}
+
+.little_bar{
+  height: 5px;
+  background-color: grey;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+div.little_bar:after{
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 40px;
+  background-color: white;
+}
+/* /BOTTOM RIGHT  */
+
+/* Media Screen XS */
 @media screen and ( max-width: 768px ){
   aside.fixed.lateral{
     width: 60px;
@@ -296,9 +395,26 @@ button.install_app{
   /* /sezione LATERAL */
 
   /* MAIN BODY */
+  .row_body.flex_box{
+    display: block;
+  }
+
   .row_body .box{
-    flex-basis: calc( 50% - 10px );
+    display: inline-block;
+    width: calc( 50% - 12px );
+    padding: 10px;
   }
   /* /MAIN BODY */
 
+  /* FOOTER */
+  ul.bottom_add_track, .right_bottom > ul{
+    flex-direction: column;
+  }
+
+  .center_bottom .timeline_button i{
+    font-size: 16px;
+    margin: 0 5px;
+  }
+  /* FOOTER */
 }
+/* /Media Screen XS */

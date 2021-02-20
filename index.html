@@ -12,6 +12,7 @@
     <!-- /style css-->
     <!-- google font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- google font -->
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
@@ -76,7 +77,7 @@
           <!-- /LATERAL PLAYLIST -->
         </div>
         <!-- LATERAL BOTTOM -->
-        <div class="lateral_bottom">
+        <div class="lateral_bottom p_w15">
           <button class="install_app flex_button" type="button" name="button">
             <i class="fas fa-arrow-down"></i>
             <h4>Installa app</h4>
@@ -84,6 +85,7 @@
           <div class="profile_section flex_box">
             <button class="profile_img" type="button" name="button">
               <img src="" alt="">
+
             </button>
             <button type="button" name="button">
               <h4>Utente</h4>
@@ -171,18 +173,8 @@
                 <h5>TITOLO</h5>
                 <h6>AUTORE</h6>
               </div>
-              <div class="box flex_box">
-                <img src="img/polo_pan_cover.jpg" alt="">
-                <h5>TITOLO</h5>
-                <h6>AUTORE</h6>
-              </div>
-              <div class="box flex_box">
-                <img src="img/polo_pan_cover.jpg" alt="">
-                <h5>TITOLO</h5>
-                <h6>AUTORE</h6>
-              </div>
             </div>
-            <h2> Recently played</h2>
+            <h2>Created for John Doe</h2>
             <div class="row_body flex_box">
               <div class="box flex_box">
                 <img src="img/polo_pan_cover.jpg" alt="">
@@ -205,13 +197,106 @@
                 <h6>AUTORE</h6>
               </div>
             </div>
+            <h2>Popular Artists</h2>
+            <div class="row_body flex_box">
+              <div class="box flex_box">
+                <img src="img/polo_pan_cover.jpg" alt="">
+                <h5>TITOLO</h5>
+                <h6>AUTORE</h6>
+              </div>
+              <div class="box flex_box">
+                <img src="img/polo_pan_cover.jpg" alt="">
+                <h5>TITOLO</h5>
+                <h6>AUTORE</h6>
+              </div>
+            </div>
           </div>
           <!-- /MAIN BODY -->
         </div>
       </main>
       <!-- FOOTER -->
-      <footer class="fixed bottom">
-        footer
+      <footer class="fixed bottom flex_box">
+        <div class="left_bottom flex_box">
+          <ul class="bottom_track flex_box list-unstyled">
+            <li>
+              <button id="bottom_img" type="button" name="button">
+                <img src="img/polo_pan_cover.jpg" alt="">
+              </button>
+            </li>
+            <li class="bottom_artist flex_box">
+              <h5>Titolo</h5>
+              <h6>Autore</h6>
+            </li>
+          </ul>
+          <ul class="bottom_add_track flex_box list-unstyled">
+            <li class="flex_box">
+              <button type="button" name="button">
+                <i class="far fa-heart"></i>
+              </button>
+            </li>
+            <li class="flex_box">
+              <button class="flex_button" type="button" name="button">
+                <i class="far fa-folder"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="center_bottom flex_box">
+          <div class="timeline_button">
+            <ul class="list-unstyled flex_box">
+              <li>
+                <button type="button" name="button">
+                  <i class="far fa-heart"></i>
+                </button>
+              </li>
+              <li>
+                <button type="button" name="button">
+                  <i class="far fa-folder"></i>
+                </button>
+              </li>
+              <li class="bottom_volume flex_box">
+                <i id="play_button" class="far fa-play-circle"></i>
+              </li>
+              <li>
+                <button type="button" name="button">
+                  <i class="far fa-folder"></i>
+                </button>
+              </li>
+              <li class="bottom_volume flex_box">
+                <i class="far fa-heart"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="timeline flex_box">
+            <div class="time">
+              0.25
+            </div>
+            <div id="timeline_bar" class="little_bar">
+            </div>
+            <div class="time">
+              4.35
+            </div>
+          </div>
+        </div>
+        <div class="right_bottom flex_box">
+          <ul class="list-unstyled flex_box">
+            <li class="flex_box">
+              <button type="button" name="button">
+                <i class="far fa-heart"></i>
+              </button>
+            </li>
+            <li class="flex_box">
+              <button type="button" name="button">
+                <i class="far fa-folder"></i>
+              </button>
+            </li>
+          </ul>
+          <div class="bottom_volume flex_box">
+            <i class="far fa-heart"></i>
+            <div id="volume" class="little_bar">
+            </div>
+          </div>
+        </div>
       </footer>
       <!-- /FOOTER -->
     </div>
