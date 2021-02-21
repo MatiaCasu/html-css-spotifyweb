@@ -33,20 +33,20 @@
           <div class="lateral_nav m_bottom30">
             <ul class="list-unstyled">
               <li>
-                <button class="flex_button" type="button" name="button">
-                  <img src="img/home-white.png" alt="">
+                <button class="lateral_button flex_box" type="button" name="button">
+                  <img class="nav_icone"src="img/home-white.png" alt="">
                   <h4>Home</h4>
                 </button>
               </li>
               <li>
-                <button class="flex_button" type="button" name="button">
-                  <img src="img/home-white.png" alt="">
-                  <h4>Home</h4>
+                <button class="lateral_button flex_box" type="button" name="button">
+                  <img class="nav_icone"src="img/search.svg" alt="">
+                  <h4>Cerca</h4>
                 </button>
               </li>
               <li>
-                <button class="flex_button" type="button" name="button">
-                  <img src="img/home-white.png" alt="">
+                <button class="lateral_button flex_box" type="button" name="button">
+                  <img class="nav_icone"src="img/libreria.svg" alt="">
                   <h4>La tua libreria</h4>
                 </button>
               </li>
@@ -55,31 +55,34 @@
           <!-- /LATERAL NAV -->
           <!-- LATERAL PLAYLIST -->
           <div class="lateral_playlist flex_box">
-            <h4 class="text-uppercase p_w15">playlist</h4>
+            <h3 class="text-uppercase p_w15">playlist</h3>
             <div class="new_playlist">
-              <button class="flex_button" type="button" name="button">
-                <img src="img/home-white.png" alt="">
+              <button class="lateral_button flex_box" type="button" name="button">
+                <i class="fas fa-plus-square"></i>
                 <h4>Crea playlist</h4>
               </button>
             </div>
             <ul class= "list-unstyled text-capitalcase p_w15">
-              <li>Nome playlist</li>
-              <li>Nome playlist</li>
-              <li>Nome playlist</li>
-              <li>Nome playlist</li>
-              <li>Nome playlist</li>
-              <li>Nome playlist</li>
-              <li>Nome playlist</li>
-              <li>Nome playlist</li>
-              <li>Nome playlist</li>
+              <li>
+                <button type="button" name="button">Nome playlist</button>
+              </li>
+              <li>
+                <button type="button" name="button">Nome playlist</button>
+              </li>
+              <li>
+                <button type="button" name="button">Nome playlist</button>
+              </li>
+              <li>
+                <button type="button" name="button">Nome playlist</button>
+              </li>
             </ul>
           </div>
           <!-- /LATERAL PLAYLIST -->
         </div>
         <!-- LATERAL BOTTOM -->
         <div class="lateral_bottom p_w15">
-          <button class="install_app flex_button" type="button" name="button">
-            <i class="fas fa-arrow-down"></i>
+          <button class="install_app flex_box" type="button" name="button">
+            <i class="install_icone fas fa-arrow-down"></i>
             <h4>Installa app</h4>
           </button>
           <div class="profile_section flex_box">
@@ -107,32 +110,32 @@
             <ul class="flex_box list-unstyled">
               <li>
                 <button class="text-uppercase" type="button" name="button">
-                  <h4>nav testo lungo</h4>
+                  <h4>in evidenza</h4>
                 </button>
               </li>
               <li>
                 <button class="text-uppercase" type="button" name="button">
-                  <h4>nav</h4>
+                  <h4>podcast</h4>
                 </button>
               </li>
               <li>
                 <button class="text-uppercase" type="button" name="button">
-                  <h4>nav</h4>
+                  <h4>classifiche</h4>
                 </button>
               </li>
               <li>
                 <button class="text-uppercase" type="button" name="button">
-                  <h4>nav testo lungo</h4>
+                  <h4>generi e mood</h4>
                 </button>
               </li>
               <li>
                 <button class="text-uppercase" type="button" name="button">
-                  <h4>nav testo lungo</h4>
+                  <h4>nuove uscite</h4>
                 </button>
               </li>
               <li>
                 <button class="text-uppercase" type="button" name="button">
-                  <h4>nav testo lungo</h4>
+                  <h4>scopri</h4>
                 </button>
               </li>
             </ul>
@@ -294,45 +297,49 @@
               </button>
             </li>
             <li class="flex_box">
-              <button class="flex_button" type="button" name="button">
+              <button class="flex_box" type="button" name="button">
                 <i class="far fa-folder"></i>
               </button>
             </li>
           </ul>
         </div>
         <div class="center_bottom flex_box">
-          <div class="timeline_button">
+          <div class="timeline_button c_white">
             <ul class="list-unstyled flex_box">
               <li>
                 <button type="button" name="button">
-                  <i class="far fa-heart"></i>
+                  <i class="fas fa-random"></i>
                 </button>
               </li>
               <li>
                 <button type="button" name="button">
-                  <i class="far fa-folder"></i>
+                  <i class="fas fa-step-backward"></i>
                 </button>
               </li>
               <li class="bottom_volume flex_box">
-                <i id="play_button" class="far fa-play-circle"></i>
+                <button type="button" name="button">
+                  <i id="play_button" class="far fa-play-circle"></i>
+                </button>
               </li>
               <li>
                 <button type="button" name="button">
-                  <i class="far fa-folder"></i>
+                  <i class="fas fa-step-forward"></i>
                 </button>
               </li>
               <li class="bottom_volume flex_box">
-                <i class="far fa-heart"></i>
+                <button type="button" name="button">
+                  <i class="fas fa-redo-alt"></i>
+                </button>
               </li>
             </ul>
           </div>
           <div class="timeline flex_box">
-            <div class="time">
+            <div class="time c_white">
               0.25
             </div>
             <div id="timeline_bar" class="little_bar">
             </div>
-            <div class="time">
+            <div class="time c_white">
               4.35
             </div>
           </div>
@@ -341,17 +348,19 @@
           <ul class="list-unstyled flex_box">
             <li class="flex_box">
               <button type="button" name="button">
-                <i class="far fa-heart"></i>
+                <i class="fas fa-list-ul"></i>
               </button>
             </li>
             <li class="flex_box">
               <button type="button" name="button">
-                <i class="far fa-folder"></i>
+                <i class="fas fa-desktop"></i>
               </button>
             </li>
           </ul>
           <div class="bottom_volume flex_box">
-            <i class="far fa-heart"></i>
+            <button type="button" name="button">
+              <i class="fas fa-volume-up"></i>
+            </button>
             <div id="volume" class="little_bar">
             </div>
           </div>

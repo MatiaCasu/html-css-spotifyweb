@@ -6,11 +6,14 @@
 
 body{
   font-family: 'Montserrat', sans-serif;
+  color: #a3a3a3;
 }
 
 /* TYPO */
 h2{
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 h3{
@@ -19,14 +22,18 @@ h3{
 
 h4, h6{
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 h5{
   font-size: 16px;
   font-weight: 700;
   margin: 0;
-  margin-top: 10px;
+  margin-top: 15px;
+}
+
+h2, h3, h5{
+  color: #fff;
 }
 
 /* /TYPO */
@@ -44,10 +51,6 @@ h5{
   color: white;
 }
 
-.c_lightgrey{
-  color: #a3a3a3;
-}
-
 ul.list-unstyled{
   margin: 0;
 }
@@ -61,19 +64,21 @@ ul.list-unstyled{
 button{
   background-color: inherit;
   border: 0;
-
+  /* background-color: pink; */
 }
 
-button.flex_button{
-  display: flex;
+button.flex_box{
   align-items: center;
+}
+
+button:hover{
+  color: #fff;
 }
 /* BUTTONS */
 
 /* STRUTTURA FIXED */
 body > .fixed_container{
   height: 100vh;
-  color: #fff;
 }
 
 .fixed_container > *.fixed, .upgrade{
@@ -147,9 +152,9 @@ footer.fixed.bottom{
 /* /sezione UPGRADE */
 /* /STRUTTURA FIXED */
 
-/* Aside LATERAL dettagli */
+/* Aside LATERAL*/
 aside.lateral > .lateral_top{
-  height: 100% ;
+  height: 100%;
   flex-direction: column;
 }
 
@@ -170,19 +175,18 @@ aside.lateral > .lateral_top{
 /* /LATERAL LOGO */
 
 /* /LATERAL Nav/Playlist BUTTONS */
-.lateral_top .flex_button{
-  height: 30px;
+.lateral_top button.flex_box{
+  height: 35px;
   width: 100%;
-  border-left: 1px solid red;
 }
 
-.lateral_top .flex_button img{
+.lateral_top button.flex_box img{
   height: 20px;
   margin: 0 10px 0 15px;
   opacity: 0.7;
 }
 
-.lateral_top .flex_button img:hover{
+.lateral_button:hover .nav_icone{
   opacity: 1;
 }
 /* /LATERAL Nav/Playlist BUTTONS */
@@ -193,8 +197,19 @@ aside.lateral > .lateral_top{
   flex-direction: column;
 }
 
+.new_playlist .lateral_button i{
+  margin: 0 10px 0 15px;
+  padding: 5px 0;
+  font-size: 30px;
+}
+
 .lateral_playlist ul{
   overflow: auto;
+}
+
+.lateral_playlist ul li{
+  padding: 5px 0;
+  font-size: 12px;
 }
 /* /LATERAL PLAYLIST */
 /* /LATERAL TOP */
@@ -205,12 +220,16 @@ button.install_app{
   width: 100%;
 }
 
-.install_app i.fa-arrow-down{
-  border: 1px solid white;
+.install_app i.install_icone{
+  border: 1px solid #a3a3a3;
   border-radius: 50%;
   padding: 3px;
   font-size: 7px;
   margin-right: 10px;
+}
+
+button.install_app:hover i.install_icone{
+  border-color: #fff;
 }
 
 .profile_section.flex_box{
@@ -227,6 +246,7 @@ button.install_app{
   margin-right: 10px;
 }
 /* /LATERAL BOTTOM */
+/* Aside LATERAL*/
 
 /* BODY NAV */
 .body_nav ul{
@@ -264,27 +284,31 @@ button.install_app{
 
 .row_body > .cover_box img{
   width: 100%;
-  z-index: 2;
   position: relative;
+  z-index: 1;
 }
 
 .overlay_play{
   position: absolute;
-  background-color: rgba( 0,0,0,0.6) ;
+  opacity: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  background-color: rgba( 0,0,0,0.5);
   align-items: center;
   justify-content: center;
-}
-
-  .cover_img .overlay_play button{
-  font-size: 40px;
-  background: none;
-}
-
-.cover_img:hover img{
   z-index: 0;
+}
+
+.cover_img:hover .overlay_play{
+  z-index: 2;
+  opacity: 1;
+  transition: opacity linear 0.5s;
+}
+
+.cover_img .overlay_play button{
+  font-size: 50px;
+  color: #fff;
+  background: none;
 }
 /* /MAIN BODY */
 
@@ -301,7 +325,6 @@ footer.bottom{
 }
 
 .left_bottom li.bottom_artist{
-  margin: 0 10px;
   height: 40px;
   flex-direction: column;
   justify-content: center;
@@ -313,7 +336,7 @@ footer.bottom{
   margin-bottom: 5px;
 }
 
-.left_bottom .bottom_add_track li{
+footer.bottom li{
   padding: 0 10px;
 }
 /* /BOTTOM LEFT  */
@@ -333,7 +356,6 @@ footer.bottom{
 
 .center_bottom .timeline_button i{
   font-size: 16px;
-  margin: 0 10px;
 }
 
 i#play_button{
@@ -363,17 +385,14 @@ div#timeline_bar.little_bar{
   justify-content: flex-end;
 }
 
-.right_bottom > ul > li{
-  margin: 0 5px;
-}
-
 .bottom_volume{
   align-items: center;
+  margin: 0 10px;
 }
 
 div#volume.little_bar{
   width: 50px;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 .little_bar{
@@ -414,11 +433,11 @@ div.little_bar:after{
     display: inline-block;
   }
 
-  .lateral button.flex_button, .lateral_bottom div.flex_box{
+  .lateral button.flex_box, .lateral_bottom div.flex_box{
     justify-content: center;
   }
 
-  .lateral_top .flex_button img, .profile_img, .install_app > i.fa-arrow-down{
+  .lateral_top button.flex_box img, .profile_img, .install_app > i.fa-arrow-down{
     margin: 0;
   }
   /* /sezione LATERAL */
@@ -446,7 +465,6 @@ div.little_bar:after{
 
   .center_bottom .timeline_button i{
     font-size: 16px;
-    margin: 0 5px;
   }
   /* FOOTER */
 }
