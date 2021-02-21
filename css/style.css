@@ -239,10 +239,11 @@ button.install_app:hover i.install_icone{
 }
 
 .profile_img{
+  background-image: url(../img/sfondo-profile.jpg);
+  background-size: cover;
   border-radius: 50%;
   height: 25px;
   width: 25px;
-  background-color: gold;
   margin-right: 10px;
 }
 /* /LATERAL BOTTOM */
@@ -324,20 +325,23 @@ footer.bottom{
   height: 40px;
 }
 
-.left_bottom li.bottom_artist{
+.left_bottom ul.bottom_artist{
   height: 40px;
   flex-direction: column;
   justify-content: center;
 }
 
-.left_bottom .bottom_artist > *{
-  font-size: 8px;
+.left_bottom .bottom_artist li button > *{
+  font-size: 9px;
   margin: 0;
-  margin-bottom: 5px;
 }
 
 footer.bottom li{
   padding: 0 10px;
+}
+
+.left_bottom .bottom_artist li button > h6:hover{
+  text-decoration: underline;
 }
 /* /BOTTOM LEFT  */
 
@@ -367,16 +371,6 @@ i#play_button{
   justify-content: space-between;
   align-items: center;
 }
-
-div#timeline_bar.little_bar{
-  height: 5px;
-  width: 80%;
-  background-color: grey;
-  margin: 0 10px;
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-}
 /* /BOTTOM CENTER  */
 
 /* BOTTOM RIGHT  */
@@ -390,25 +384,50 @@ div#timeline_bar.little_bar{
   margin: 0 10px;
 }
 
+div#timeline_bar.little_bar{
+  width: 80%;
+}
+
 div#volume.little_bar{
-  width: 50px;
-  margin: 0 10px;
+  width: 100px;
 }
 
 .little_bar{
-  height: 5px;
+  height: 3px;
   background-color: grey;
   border-radius: 20px;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
+  margin: 0 10px;
 }
 
-div.little_bar:after{
-  content: "";
+.active_bar{
   position: absolute;
-  height: 6px;
-  width: 40px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60%;
+  border-radius: 20px;
   background-color: white;
+}
+
+.active_bar_hover{
+  position: relative;
+  top: -3px;
+  left: calc(100% - 3px );
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0;
+}
+
+.active_bar:hover .active_bar_hover{
+  opacity: 1;
+}
+
+.active_bar:hover{
+  background-color: #c6ff63;
 }
 /* /BOTTOM RIGHT  */
 /* /FOOTER */
