@@ -13,7 +13,7 @@ body{
 h2{
   font-size: 25px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 h3{
@@ -64,7 +64,6 @@ ul.list-unstyled{
 button{
   background-color: inherit;
   border: 0;
-  /* background-color: pink; */
 }
 
 button.flex_box{
@@ -73,6 +72,10 @@ button.flex_box{
 
 button:hover{
   color: #fff;
+}
+
+button:active{
+  border: none;
 }
 /* BUTTONS */
 
@@ -137,6 +140,7 @@ footer.fixed.bottom{
   align-items: center;
   justify-content: flex-end;
   padding-right: 50px;
+  z-index: 10;
 }
 
 .upgrade_text{
@@ -269,7 +273,12 @@ button.install_app:hover i.install_icone{
 }
 
 .main_body .row_body{
-  padding-bottom: 20px;
+  padding: 20px 0;
+}
+
+.row_body.rounded_cover .cover_img{
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .row_body .cover_box{
@@ -320,6 +329,9 @@ footer.bottom{
   padding: 10px;
 }
 
+footer.bottom li{
+  padding: 0 10px;
+}
 /* BOTTOM LEFT  */
 .left_bottom ul.bottom_track img{
   height: 40px;
@@ -336,8 +348,8 @@ footer.bottom{
   margin: 0;
 }
 
-footer.bottom li{
-  padding: 0 10px;
+.left_bottom .bottom_artist li{
+  padding: 0;
 }
 
 .left_bottom .bottom_artist li button > h6:hover{
@@ -408,7 +420,7 @@ div#volume.little_bar{
   height: 100%;
   width: 60%;
   border-radius: 20px;
-  background-color: white;
+  background-color: #fff;
 }
 
 .active_bar_hover{
