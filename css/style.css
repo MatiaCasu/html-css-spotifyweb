@@ -25,6 +25,7 @@ h2{
 
 h3{
   font-size: 18px;
+    font-weight: 700;
 }
 
 h4, h6{
@@ -199,19 +200,25 @@ aside.lateral > .lateral_top{
 /* /LATERAL LOGO */
 
 /* /LATERAL Nav/Playlist BUTTONS */
-.lateral_top button.flex_box{
-  min-height: 35px;
+.lateral_button{
+  height: 35px;
   width: 100%;
+  align-items: center;
+  margin: 2px 0;
 }
 
-.lateral_top button.flex_box img{
-  height: 20px;
+.lateral_top img.nav_icone{
+  height: 60%;
   margin: 0 10px 0 15px;
   opacity: 0.5;
 }
 
-.lateral_button:hover .nav_icone{
+.lateral_button:hover img.nav_icone{
   opacity: 1;
+}
+
+.lateral_button:hover{
+  color: #fff;
 }
 /* /LATERAL Nav/Playlist BUTTONS */
 
@@ -235,28 +242,29 @@ aside.lateral > .lateral_top{
   padding: 5px 0;
   font-size: 12px;
 }
+
+.lateral_playlist ul li:hover{
+  color: #fff;
+}
 /* /LATERAL PLAYLIST */
 /* /LATERAL TOP */
 
 /* LATERAL BOTTOM */
-button.install_app{
-  height: 30px;
-  width: 100%;
-}
-
-.install_app i.install_icone{
+a.install_icone{
   border: 1px solid #a3a3a3;
   border-radius: 50%;
-  padding: 3px;
-  font-size: 7px;
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+  font-size: 10px;
   margin-right: 10px;
 }
 
-button.install_app:hover i.install_icone{
+.install_app:hover .install_icone i{
   border-color: #fff;
 }
 
-.profile_section.flex_box{
+.profile_section{
   border-top: 1px solid white;
   align-items: center;
   height: 40px;
@@ -268,7 +276,7 @@ button.install_app:hover i.install_icone{
   border-radius: 50%;
   height: 25px;
   width: 25px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 /* /LATERAL BOTTOM */
 /* Aside LATERAL*/
@@ -343,12 +351,6 @@ button.install_app:hover i.install_icone{
 /* /MAIN BODY */
 
 /* FOOTER */
-.bottom *{
-  /* border: 1px solid white; */
-}
-/* .debug  */
-/* Il footer ha altezza 70px */
-
 footer.bottom{
   padding: 5px;
 }
@@ -408,11 +410,11 @@ footer.bottom li{
 }
 
 .center_bottom .timeline_button i{
-  font-size: 14px;
+  font-size: 16px;
 }
 
 i#play_button{
-  font-size: 22px;
+  font-size: 25px;
 }
 
 .center_bottom ul.timeline{
@@ -439,7 +441,7 @@ li#volume.little_bar{
 }
 
 .little_bar{
-  height: 3px;
+  height: 4px;
   background-color: grey;
   border-radius: 20px;
   overflow: visible;
@@ -468,11 +470,11 @@ li#volume.little_bar{
   opacity: 0;
 }
 
-.active_bar:hover .active_bar_hover{
+.little_bar:hover .active_bar_hover{
   opacity: 1;
 }
 
-.active_bar:hover{
+.little_bar:hover .active_bar{
   background-color: #c6ff63;
 }
 /* /BOTTOM RIGHT  */
@@ -490,7 +492,7 @@ li#volume.little_bar{
   }
   /* /STRUTTURA FIXED */
 
-  .lateral_logo > img, .lateral button > h4, .lateral_playlist{
+  .lateral_logo > img, aside.lateral h4, .lateral_playlist{
     display: none;
   }
 
@@ -498,11 +500,11 @@ li#volume.little_bar{
     display: inline-block;
   }
 
-  .lateral button.flex_box, .lateral_bottom div.flex_box{
+  .lateral_button, .lateral_bottom .flex_box{
     justify-content: center;
   }
 
-  .lateral_top button.flex_box img, .profile_img, .install_app > i.fa-arrow-down{
+  .lateral_top img.nav_icone, .profile_img, a.install_icone{
     margin: 0;
   }
   /* /sezione LATERAL */
@@ -530,11 +532,15 @@ li#volume.little_bar{
   }
 
   .center_bottom .timeline_button i{
-    font-size: 12px;
+    font-size: 10px;
+  }
+
+  i#play_button{
+    font-size: 18px;
   }
 
   li#volume.little_bar{
-    width: 30px;
+    width: 20px;
   }
   /* FOOTER */
 }
