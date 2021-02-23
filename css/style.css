@@ -38,6 +38,7 @@ h5{
   font-weight: 700;
   margin: 0;
   margin-top: 15px;
+  text-transform: capitalize;
 }
 
 h2, h3, h5{
@@ -220,6 +221,10 @@ aside.lateral > .lateral_top{
 .lateral_button:hover{
   color: #fff;
 }
+
+.lateral_top .lateral_button:hover{
+  border-left: #c6ff63 2px solid;
+}
 /* /LATERAL Nav/Playlist BUTTONS */
 
 /* LATERAL PLAYLIST */
@@ -291,7 +296,16 @@ a.install_icone{
 }
 
 .body_nav ul li{
-  margin: 0 20px
+  margin: 0 20px;
+}
+
+.body_nav ul button:hover::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 30px;
+  margin: 0 auto;
+  background-color: #c6ff63;
 }
 /* BODY NAV */
 
@@ -323,7 +337,6 @@ a.install_icone{
 .row_body > .cover_box img{
   width: 100%;
   position: relative;
-  z-index: 1;
 }
 
 .overlay_play{
@@ -334,11 +347,10 @@ a.install_icone{
   background-color: rgba( 0,0,0,0.5);
   align-items: center;
   justify-content: center;
-  z-index: 0;
+  z-index: 1;
 }
 
 .cover_img:hover .overlay_play{
-  z-index: 2;
   opacity: 1;
   transition: opacity linear 0.5s;
 }
@@ -463,8 +475,8 @@ li#volume.little_bar{
   position: relative;
   top: -3px;
   left: calc(100% - 3px );
-  height: 9px;
-  width: 9px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
   background-color: #fff;
   opacity: 0;
