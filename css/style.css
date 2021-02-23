@@ -173,7 +173,7 @@ footer.fixed.bottom{
 
 .upgrade_text:hover{
   transform: scale(1.1);
-  transition: transform linear 0.3s;
+  transition: transform ease 0.5s;
 }
 /* /sezione UPGRADE */
 /* /STRUTTURA FIXED */
@@ -352,7 +352,7 @@ a.install_icone{
   opacity: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba( 0,0,0,0.8);
+  background-color: rgba( 0,0,0,0.9);
   align-items: center;
   justify-content: center;
 }
@@ -370,29 +370,43 @@ a.install_icone{
 /* OVERLAY BUTTON ANIMATION */
 .cover_img:hover .overlay_play button i{
   animation:
+  floating 1s linear infinite alternate,
   scale 1.2s linear 1;
 }
 
 @keyframes scale{
   0%{
     transform: scale(0.2);
+    text-shadow: none;
   }
 
-  20%{
+  10%{
     transform: rotateX(90deg);
   }
 
-  50%{
+  40%{
     transform: scale(1.6);
     color: #a8ff11;
   }
 
-  80%{
+  70%{
     transform: rotateX(90deg);
   }
 
   100%{
     transform: scale(1);
+  }
+}
+
+@keyframes floating{
+  0%{
+    transform: translateY(-5%);
+    text-shadow: 3px 1px 10px #40ff06;
+  }
+
+  100%{
+    transform: translateY(5%);
+    text-shadow: 3px 1px 10px #40ff06;
   }
 }
 /* /OVERLAY BUTTON ANIMATION */
