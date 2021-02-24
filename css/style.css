@@ -3,13 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-.debug *{
-  border: 1px solid white;
-}
-
-.debug button{
-  background-color: grey;
-}
 
 body{
   font-family: 'Montserrat', sans-serif;
@@ -19,13 +12,11 @@ body{
 /* TYPO */
 h2{
   font-size: 25px;
-  font-weight: 700;
   margin-bottom: 15px;
 }
 
 h3{
   font-size: 18px;
-    font-weight: 700;
 }
 
 h4, h6{
@@ -35,7 +26,6 @@ h4, h6{
 
 h5{
   font-size: 16px;
-  font-weight: 700;
   margin: 0;
   margin-top: 15px;
   text-transform: capitalize;
@@ -43,8 +33,8 @@ h5{
 
 h2, h3, h5{
   color: #fff;
+  font-weight: 700;
 }
-
 /* /TYPO */
 
 /* MIX */
@@ -84,6 +74,15 @@ a:hover{
   text-decoration: none;
   color: inherit;
 }
+
+[class*="button"]:hover, button:hover, li:hover{
+  color: #fff;
+}
+
+.cover_box >*:hover, .bottom_artist li:hover{
+  color: #fff;
+  text-decoration: underline;
+}
 /* /MIX */
 
 /* BUTTONS */
@@ -94,10 +93,6 @@ button{
 
 button.flex_box{
   align-items: center;
-}
-
-button:hover, i:hover{
-  color: #fff;
 }
 /* BUTTONS */
 
@@ -158,7 +153,6 @@ footer.fixed.bottom{
   width: calc( 100% - 200px );
   height: 70px;
   background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
   align-items: center;
   justify-content: flex-end;
   padding-right: 50px;
@@ -218,10 +212,6 @@ aside.lateral > .lateral_top{
   opacity: 1;
 }
 
-.lateral_button:hover{
-  color: #fff;
-}
-
 .lateral_top .lateral_button:hover{
   border-left: #c6ff63 2px solid;
 }
@@ -246,10 +236,6 @@ aside.lateral > .lateral_top{
 .lateral_playlist ul li{
   padding: 5px 0;
   font-size: 12px;
-}
-
-.lateral_playlist ul li:hover{
-  color: #fff;
 }
 /* /LATERAL PLAYLIST */
 /* /LATERAL TOP */
@@ -352,7 +338,7 @@ a.install_icone{
   opacity: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba( 0,0,0,0.9);
+  background-color: rgba( 0,0,0,0.8);
   align-items: center;
   justify-content: center;
 }
@@ -363,7 +349,6 @@ a.install_icone{
 
 .cover_img .overlay_play button{
   font-size: 50px;
-  color: #fff;
   background: none;
 }
 
@@ -438,22 +423,13 @@ footer.bottom li{
 }
 
 /* BOTTOM LEFT  */
-.left_bottom > *{
-  height: 60%;
-}
-
 .bottom_track img{
-  height: 100%;
+  height: 35px;
 }
 
 .left_bottom .bottom_artist li{
   font-size: 9px;
   margin-top: 5px;
-}
-
-.left_bottom .bottom_artist li a:hover{
-  text-decoration: underline;
-  color: white;
 }
 /* /BOTTOM LEFT  */
 
